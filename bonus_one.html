@@ -1,0 +1,52 @@
+<!--*
+ * Megan Yates
+ * March 27th, 2016
+ * CS1520 - Programming Languages for Web Applications
+ *
+ * BONUS ONE
+ *
+ * Details from http://www.mattbowytz.com/bonus1/bonus-recs.html
+ * Using javascript and/or jQuery, you will make a call to an api to retrieve search terms for a "type ahead" search
+ * When the user begins to type something, it should filter out the data list and present the relevant results
+ * Upon display of the results, the user should be able to click on them and it will take you to google search results for that term
+ * The url is "http://www.mattbowytz.com/simple_api.json"
+ * You will need to append a query param called "data" and you can request "all", "interests", or "programming"
+ * Style for the results should match the existing form as closely as possible
+ *-->
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Predictive Search</title>
+	<link rel="stylesheet" href="bonus_one.css">
+</head>
+<body>
+	<h1 class="h1"><span class="rainbow">Predictive Search</span></h1>
+
+	<div class="flexsearch">
+		<div class="flexsearch-wrapper">
+			<!-- You'll handle the form with js, so no need for method and action -->
+			<form class="flexsearch-form" id="mainForm">
+				<div class="flexsearch-input-wrapper">
+					<input class="flexsearch-input" id="searching" type="search" placeholder="search" onkeyup="generateList()">
+				</div>
+					
+				<div>
+					<ul id="list"></ul>
+				</div>
+				<!-- From katlee8225 MyAnimeList -->
+				<div style="margin:auto; padding-top:50px; text-align:center">
+					<img src="cute_cat.gif" alt="">
+				</div>
+				
+				<input class="flexsearch-submit" type="submit" value="&#10140;"/>
+			</form>
+		</div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="bonus_one.js"></script>
+</body>
+</html>

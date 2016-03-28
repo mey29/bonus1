@@ -1,0 +1,124 @@
+/*
+ * Megan Yates
+ * March 27th, 2016
+ * CS1520 - Programming Languages for Web Applications
+ *
+ * BONUS ONE
+ *
+ * Details from http://www.mattbowytz.com/bonus1/bonus-recs.html
+ * Using javascript and/or jQuery, you will make a call to an api to retrieve search terms for a "type ahead" search
+ * When the user begins to type something, it should filter out the data list and present the relevant results
+ * Upon display of the results, the user should be able to click on them and it will take you to google search results for that term
+ * The url is "http://www.mattbowytz.com/simple_api.json"
+ * You will need to append a query param called "data" and you can request "all", "interests", or "programming"
+ * Style for the results should match the existing form as closely as possible
+ * Don't forget to style the results from the search!
+ * And anything else you add to the application, for that matter.
+ */
+
+.flexsearch-wrapper {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  overflow: hidden;
+  background: transparent;
+  margin: 0;
+  position: static;
+}
+
+.flexsearch-form {
+  overflow: hidden;
+  position: relative;
+}
+
+.flexsearch-input-wrapper {
+  padding: 0 66px 0 0;
+  overflow: hidden;
+}
+
+.flexsearch-input {
+  width: 100%;
+}
+
+.flexsearch {
+  padding: 10px;
+}
+
+.flexsearch-input {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 60px;
+  width: 100%;
+  padding: 0 46px 0 10px;
+  border-color: #ff1a75;
+  border-radius: 35px;
+  border-style: solid;
+  border-width: 5px;
+  color: #ff1a75;
+  font-family: Palatino Linotype;   
+  font-size: 26px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.flexsearch-submit {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  margin-right: 5px;
+  background: transparent;
+  color: #ff1a75;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.flexsearch-input:focus {
+  outline: none;
+  border-color: #ff99c2;
+}
+
+.flexsearch-input:focus.flexsearch-submit {
+  color: #ff99c2;
+}
+
+.flexsearch-submit:hover {
+  color: #ff1a75;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  font-family: Palatino Linotype;   
+  color: #ff99c2;
+}
+
+input:-moz-placeholder {
+  color: #ff1a75;
+}
+
+.h1 {
+  color: #ff99c2;
+  font-family: 'Verdana', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 45px;
+  text-align: center;
+}
+
+#list {
+	 font-family: Palatino Linotype;   
+}	 
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
